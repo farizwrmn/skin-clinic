@@ -77,7 +77,7 @@ export const MovingCards = ({
       <div
         ref={containerRef}
         className={cn(
-          "scroller relative z-20 w-full overflow-hidden xl:max-w-7xl [mask-image:linear-gradient(to_right,transparent,white_20%,white_80%,transparent)] mt-10",
+          "scroller relative z-20 w-full overflow-hidden xl:max-w-7xl mt-10", // Removed mask-image temporarily for debugging
           className
         )}
       >
@@ -91,21 +91,22 @@ export const MovingCards = ({
         >
           {items.map((item, idx) => (
             <li
-              className="w-[350px] md:w-[450px] max-w-full relative rounded-2xl border border-b-0 flex-shrink-0 border-slate-700 items-center justify-center overflow-hidden"
+              className="w-[350px] md:w-[450px] max-w-full relative rounded-2xl flex-shrink-0 border-slate-700 items-center justify-center overflow-hidden"
               key={item.image}
             >
               <Link href={item.link} className="absolute inset-0">
                 <div
-                  aria-hidden="true"
-                  className="user-select-none -z-1 pointer-events-none absolute -left-0.5 -top-0.5 h-[calc(100%_+_4px)] w-[calc(100%_+_4px)] items-center justify-center"
-                ></div>
-                <Image
-                  src={item.image}
-                  alt={item.image}
-                  width={item.width}
-                  height={100} // Adjust to the actual height of the image
-                  className="object-cover w-full h-fit" // Ensure the image fits perfectly
-                />
+                  aria-hidden="false"
+                  className="user-select-none z-0 pointer-events-none absolute left-0 top-0 h-full w-full items-center justify-center"
+                >
+                  <Image
+                    src={item.image}
+                    alt={item.image}
+                    width={item.width}
+                    height={1200} // You can adjust this value according to your design
+                    className="object-cover w-full h-full" // Ensures image is fully visible and scales correctly
+                  />
+                </div>
               </Link>
             </li>
           ))}

@@ -20,8 +20,8 @@ export default function Home() {
       {/* <Card /> */}
       <MovingCards
         items={[
-          { image: "/assets/image/google.png", width: 300, link: "/" },
-          { image: "/assets/image/tokped.png", width: 300, link: "/" },
+          { image: "/assets/image/google.png", width: 400, link: "/" },
+          { image: "/assets/image/tokped.png", width: 400, link: "/" },
           { image: "/assets/image/insta.png", width: 400, link: "/" },
           { image: "/assets/image/shopee.png", width: 600, link: "/" },
         ]}

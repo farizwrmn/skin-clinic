@@ -42,7 +42,7 @@ export default function Desc({}: Props) {
 
   return (
     <>
-      <div className="xl:mt-10 mt-80 xl:ml-40 justify-end bg-yellow-300 p-5 rounded-xl">
+      <div className="xl:mt-10 mt-10 xl:ml-40 justify-end bg-yellow-300 p-5 rounded-xl">
         <h1 className="text-3xl font-sergio flex text-center justify-center">
           Why with us{" "}
           <FaQuestion className="animate-bounce direction-reverse" />
@@ -52,7 +52,8 @@ export default function Desc({}: Props) {
             We help you to look beautiful and healthy, best services,
           </p>
           <p className="text-md font-mono text-end">
-            we hires professional to make your life easier.
+            we hires professional to make you{" "}
+            <span className="font-bold text-pink-600 italic">live easier</span>.
           </p>
         </div>
       </div>
@@ -65,7 +66,7 @@ export default function Desc({}: Props) {
             {/* Toggle button */}
             <button
               onClick={() => setIsExpanded(!isExpanded)}
-              className="px-4 py-1 bg-gray-100 text-slate-700 font-semibold rounded-full hover:bg-gray-50 transition-all duration-300"
+              className="px-4 py-1 shadow-xl border-slate-100/20 bg-slate-200/10 backdrop-blur-xl text-slate-700 font-semibold rounded-full hover:bg-gray-50 transition-all duration-300"
             >
               {isExpanded ? "Show Less" : "Show More"}
             </button>
